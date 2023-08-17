@@ -1,8 +1,8 @@
 import { Switch } from "@nextui-org/react";
 import { useTheme } from "next-themes";
 import React from "react";
-import SunIcon from "../icons/SunIcon";
-import MoonIcon from "../icons/MoonIcon";
+import SunIcon from "../atoms/SunIcon";
+import MoonIcon from "../atoms/MoonIcon";
 
 const ThemSwitch = () => {
   const [mounted, setMounted] = React.useState(false);

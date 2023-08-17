@@ -1,5 +1,7 @@
 import React from "react";
-const SunIcon = (props) => (
+type Props = React.SVGAttributes<SVGElement>;
+
+const SunIcon = (props: Props) => (
   <svg
     aria-hidden="true"
     focusable="false"

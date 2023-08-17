@@ -1,20 +1,22 @@
-import { type Session } from 'next-auth';
-import { SessionProvider } from 'next-auth/react';
-import { type AppType } from 'next/app';
-import { api } from '~/utils/api';
-import '~/styles/globals.css';
-import { ThemeProvider } from 'next-themes';
-// `@chakra-ui/theme` is a part of the base install with `@chakra-ui/react`
-import Layout from '~/Components/Templates/Layout';
+import { type Session } from "next-auth";
+import { SessionProvider } from "next-auth/react";
+import { type AppType } from "next/app";
+import { api } from "@/utils/api";
+import "@/styles/globals.css";
+import Layout from "./layout";
+import { Providers } from "@/utils/providers";
 
-const MyApp: AppType<{ session: Session | null }> = ({ Component, pageProps: { session, ...pageProps } }) => {
+const MyApp: AppType<{ session: Session | null }> = ({
+  Component,
+  pageProps: { session, ...pageProps },
+}) => {
   return (
     <SessionProvider session={session}>
-      <ThemeProvider attribute="class">
+      <Providers>
         <Layout>
           <Component {...pageProps} />
         </Layout>
-      </ThemeProvider>
+      </Providers>
     </SessionProvider>
   );
 };

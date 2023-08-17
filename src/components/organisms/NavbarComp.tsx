@@ -12,7 +12,7 @@ import {
   Avatar,
 } from "@nextui-org/react";
 import Link from "next/link";
-import Logo from "../icons/Logo";
+import Logo from "../atoms/Logo";
 import ThemSwitch from "../molecules/ThemSwitch";
 
 const NavbarComp = () => {

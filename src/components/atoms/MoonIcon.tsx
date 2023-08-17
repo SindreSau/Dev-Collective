@@ -1,6 +1,7 @@
 import React from "react";
+type Props = React.SVGAttributes<SVGElement>;
 
-const MoonIcon = (props) => (
+const MoonIcon = (props: Props) => (
   <svg
     aria-hidden="true"
     focusable="false"

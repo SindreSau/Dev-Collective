@@ -5,14 +5,14 @@ const Logo = () => {
   // Set color according to theme
   const [mounted, setMounted] = React.useState(false);
   const { theme } = useTheme();
-  const color = theme === "dark" ? "#fff" : "#000";
+  const color = theme === "dark" ? "#fff" : "#000" || "rbg(125,125,125)";
 
   React.useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
 
   return (
-    <div className="h-10 w-10">
+    <div className="h-8 w-8 md:h-10 md:w-10">
       {/* <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --> */}
       <svg
         width="100%"

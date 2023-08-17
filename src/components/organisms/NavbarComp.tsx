@@ -28,7 +28,7 @@ const NavbarComp = () => {
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             className="sm:hidden"
           />
-          <NavbarBrand>
+          <NavbarBrand className="pl-1.5 md:pl-0">
             <Link href={"/"}>
               <Logo />
             </Link>
@@ -51,7 +51,7 @@ const NavbarComp = () => {
 
         {/* Right menu */}
         <NavbarContent justify="end">
-          <NavbarItem className="hidden lg:flex">
+          <NavbarItem className="">
             <ThemSwitch />
           </NavbarItem>
           <NavbarItem className="hidden lg:flex">

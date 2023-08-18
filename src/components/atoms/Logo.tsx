@@ -2,14 +2,15 @@ import { useTheme } from "next-themes";
 import React from "react";
 
 const Logo = () => {
-  // Set color according to theme
+  // Set the theme-color on mount
   const [mounted, setMounted] = React.useState(false);
-  const { theme } = useTheme();
-  const color = theme === "dark" ? "#fff" : "#000" || "rbg(125,125,125)";
+  const { resolvedTheme } = useTheme();
 
   React.useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
+
+  const color = resolvedTheme === "dark" ? "#fff" : "#000";
 
   return (
     <div className="h-8 w-8 md:h-10 md:w-10">

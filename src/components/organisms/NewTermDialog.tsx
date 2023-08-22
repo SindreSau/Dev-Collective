@@ -4,13 +4,10 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "../ui/dialog";
-import { Label } from "../ui/label";
-import { Input } from "../ui/input";
 import { Toaster } from "../ui/toaster";
 import NewTermForm from "../molecules/NewTermForm";
 

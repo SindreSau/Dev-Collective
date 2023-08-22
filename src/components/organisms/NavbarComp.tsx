@@ -10,6 +10,16 @@ import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 
 import { motion } from "framer-motion";
+import { useSession } from "next-auth/react";
+import Image from "next/image";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
 
 const NavbarComp = () => {
   const router = useRouter();
@@ -63,8 +73,10 @@ const NavbarComp = () => {
     },
   };
 
+  const { data: sessionData } = useSession();
+
   return (
-    <nav className="sticky left-0 top-0 w-full border-b border-gray-200 bg-white shadow-md dark:border-gray-600 dark:bg-zinc-900">
+    <nav className="sticky left-0 top-0 w-full border-b border-gray-200 bg-white shadow-md dark:border-gray-950 dark:bg-background">
       <motion.div
         variants={navbarVariants}
         initial="closed"
@@ -78,14 +90,58 @@ const NavbarComp = () => {
 
         {/* Right side */}
         <div className="flex items-center gap-2 md:order-2 md:gap-0">
-          <Avatar className="px-2">
-            <AvatarImage>
-              <User2 />
-            </AvatarImage>
-            <AvatarFallback>
-              <User2 />
-            </AvatarFallback>
-          </Avatar>
+          {sessionData ? (
+            <div className="flex items-center justify-center px-2">
+              <DropdownMenu>
+                <DropdownMenuTrigger>
+                  {/* <span className="hidden text-popover-foreground md:block">
+                {sessionData?.user.name}
+              </span> */}
+                  <Avatar>
+                    <AvatarImage>
+                      <User2 />
+                    </AvatarImage>
+                    <AvatarFallback>
+                      <Image
+                        className="rounded-full"
+                        src={sessionData?.user.image ?? ""}
+                        width={34}
+                        height={34}
+                        alt="Img"
+                      ></Image>
+                    </AvatarFallback>
+                  </Avatar>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuLabel className="cursor-default">My Account</DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem>Profile (To be coming)</DropdownMenuItem>
+                  <DropdownMenuItem>Settings (To be coming)</DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem
+                    className="cursor-pointer"
+                    onClick={() => {
+                      router.push("/api/auth/signout").catch((err) => {
+                        console.log(err);
+                      });
+                    }}
+                  >
+                    <span className="font-bold">Sign out</span>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+          ) : (
+            <Avatar className="cursor-not-allowed px-2">
+              <AvatarImage>
+                <User2 />
+              </AvatarImage>
+              <AvatarFallback>
+                <User2 />
+              </AvatarFallback>
+            </Avatar>
+          )}
+
           <ThemeToggler />
 
           {/* Menu toggle on smaller screens */}

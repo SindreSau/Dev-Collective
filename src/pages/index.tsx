@@ -1,9 +1,19 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import Head from "next/head";
 import { api } from "@/utils/api";
+import TermTable from "@/components/organisms/TermTable";
+
+type dataType = Array<{
+  term: string;
+  abbreviation: string;
+  description: string;
+  tags: Array<string>;
+  createdBy: string;
+}>;
 
 export default function Techitpedia() {
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
+
   return (
     <>
       <Head>
@@ -11,7 +21,9 @@ export default function Techitpedia() {
         <meta name="Description" content="Created by SindreSau" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Techitpedia</h1>
+      <section>
+        <TermTable />
+      </section>
     </>
   );
 }

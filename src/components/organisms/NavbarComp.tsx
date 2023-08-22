@@ -64,12 +64,12 @@ const NavbarComp = () => {
   };
 
   return (
-    <nav className="sticky left-0 top-0 z-20 w-full border-b border-gray-200 bg-white dark:border-gray-600 dark:bg-zinc-900">
+    <nav className="sticky left-0 top-0 w-full border-b border-gray-200 bg-white shadow-md dark:border-gray-600 dark:bg-zinc-900">
       <motion.div
         variants={navbarVariants}
         initial="closed"
         animate={isOpen ? "open" : "closed"}
-        className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4"
+        className="container mx-auto flex flex-wrap items-center justify-between p-4"
       >
         {/* Left side */}
         <Link href="/">

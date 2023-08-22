@@ -61,6 +61,14 @@ export const authOptions: NextAuthOptions = {
      * @see https://next-auth.js.org/providers/github
      */
   ],
+  //! Uncomment this to use custom pages for sign in, sign out, etc.
+  /* pages: {
+    signIn: "/auth/signin",
+    signOut: "/auth/signout",
+    error: "/auth/error",
+    verifyRequest: "/auth/verify-request",
+    newUser: "/auth/new-user",
+  }, */
 };
 
 /**

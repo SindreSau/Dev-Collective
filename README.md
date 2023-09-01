@@ -1,5 +1,5 @@
 <h1>IT and tech loves abbreviations</h1>
-**This web application is designed to help IT learners quickly look up various terms and abbreviations frequently used in the IT and tech fields.
+<h3><b>This web application is designed to help IT learners quickly look up various terms and abbreviations frequently used in the IT and tech fields.</b></h3>
 
 <h2>Project Goals</h2>
 <ol>

@@ -28,3 +28,13 @@
 
 <h2>Feel free to visit the latest build of the platform at:</h2>
 <a href="https://dev-collective-eight.vercel.app/">https://dev-collective-eight.vercel.app/</a>
+
+<h2>Tech stack</h2>
+<ul>
+  <li>Next.js</li>
+  <li>React</li>
+  <li>MongoDB</li>
+  <li>Tailwind css</li>
+  <li>Shadcn/ui</li>
+  <li>Framer motion</li>
+</ul>

@@ -1,28 +1,30 @@
-# Create T3 App
+<h1>IT and tech loves abbreviations</h1>
+**This web application is designed to help IT learners quickly look up various terms and abbreviations frequently used in the IT and tech fields.
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+<h2>Project Goals</h2>
+<ol>
+  <li>
+    <b>Learning through Building: </b> The primary intent of this project is to practice the following skills:
+    <ul>
+      <li>Authentication</li>
+      <li>Frontend and UI Development</li>
+      <li>Working with tables</li>
+      <li>Search functionality</li>
+      <li>Development using Next.js</li>
+    </ul>
+  </li>
+  <li>
+    <b>Restricted content creation: </b>
+    <ul>
+      <li>Only authenticated and approved users will have the ability to create and input new terms into the database.</li>
+      <li>All visitors, irrespective of their authentication status, will be able to read from the database and look up terms.</li>
+    </ul>
+  </li>
+  <li>
+    <b>Expand: </b>
+    <p>Looking ahead, i see potential to branch out this platform and add additional aspects based on feedback or ideas that might come, such as a "forum" for sharing categorized tools for development</p>
+  </li>
+</ol>
 
-## What's next? How do I make an app with this?
-
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
-
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
-
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
-
-## Learn More
-
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
-
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+<h2>Feel free to visit the latest build of the platform at:</h2>
+<a href="https://dev-collective-eight.vercel.app/">https://dev-collective-eight.vercel.app/</a>
